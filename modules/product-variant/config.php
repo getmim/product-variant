@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'product-variant',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getmim/product-variant.git',
     '__license' => 'MIT',
     '__author' => [
@@ -17,6 +17,9 @@ return [
         'required' => [
             [
                 'product' => NULL
+            ],
+            [
+                'lib-enum' => NULL
             ]
         ],
         'optional' => []
@@ -29,6 +32,14 @@ return [
             ]
         ],
         'files' => []
+    ],
+    'libEnum' => [
+        'enums' => [
+            'product-variant.status' => [
+                0 => 'Deleted',
+                1 => 'Active'
+            ]
+        ]
     ],
     'libFormatter' => [
         'formats' => [
@@ -56,6 +67,10 @@ return [
                 'price' => [
                     'type' => 'number',
                     'decimal' => 2
+                ],
+                'status' => [
+                    'type' => 'enum',
+                    'enum' => 'product-variant.status'
                 ],
                 'updated' => [
                     'type' => 'date'

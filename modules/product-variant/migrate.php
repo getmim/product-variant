@@ -50,6 +50,15 @@ return [
                 ],
                 'index' => 6000
             ],
+            'status' => [
+                'type' => 'TINYINT',
+                'attrs' => [
+                    'unsigned' => true,
+                    'null' => false,
+                    'default' => 1
+                ],
+                'index' => 7000
+            ],
             'updated' => [
                 'type' => 'TIMESTAMP',
                 'attrs' => [

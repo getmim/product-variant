@@ -1,6 +1,18 @@
 <?php
 
 return [
+    'Cart\\Model\\CartItem' => [
+        'fields' => [
+            'variant' => [
+                'type' => 'INT',
+                'attrs' => [
+                    'unsigned' => true,
+                    'null' => true
+                ],
+                'index' => 3100
+            ]
+        ]
+    ],
     'ProductVariant\\Model\\ProductVariant' => [
         'fields' => [
             'id' => [

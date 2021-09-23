@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'product-variant',
-    '__version' => '0.1.0',
+    '__version' => '0.2.0',
     '__git' => 'git@github.com:getmim/product-variant.git',
     '__license' => 'MIT',
     '__author' => [
@@ -80,6 +80,17 @@ return [
                 ]
             ],
             'cart-item' => [
+                'variant' => [
+                    'type' => 'object',
+                    'model' => [
+                        'name' => 'ProductVariant\\Model\\ProductVariant',
+                        'field' => 'id',
+                        'type' => 'number'
+                    ],
+                    'format' => 'product-variant'
+                ]
+            ],
+            'purchase-product' => [
                 'variant' => [
                     'type' => 'object',
                     'model' => [

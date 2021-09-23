@@ -13,6 +13,18 @@ return [
             ]
         ]
     ],
+    'Purchase\\Model\\PurchaseProduct' => [
+        'fields' => [
+            'variant' => [
+                'type' => 'INT',
+                'attrs' => [
+                    'unsigned' => true,
+                    'null' => true
+                ],
+                'index' => 3100
+            ]
+        ]
+    ],
     'ProductVariant\\Model\\ProductVariant' => [
         'fields' => [
             'id' => [
